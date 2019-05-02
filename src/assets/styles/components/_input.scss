@@ -1,0 +1,12 @@
+.form-control, .input-group-text {
+  border: 1px solid;
+  border-color: theme-color("input-border");
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &.is-invalid {
+    background-image: unset;
+    padding: 0.375rem 0.75rem;
+  }
+}

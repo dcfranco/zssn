@@ -1,0 +1,69 @@
+.sidebar {
+  background: theme-color("secondary");
+  border: 1px solid $gray-3;
+  z-index: 1031;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+
+  .sidebar-brand {
+    width: 100%;
+    display: block;
+    height: 50px;
+    background: $blue-gray-5;
+    line-height: 48px;
+    overflow: hidden;
+    color: $white;
+    letter-spacing: 10px;
+    font-size: 20px;
+  }
+
+  .sidebar-links {
+    overflow: hidden;
+    a {
+      position: relative;
+      height: 55px;
+      padding-left: 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      @include flexbox($align: center, $justify: flex-start);
+      @include create-font($size: 15px, $color: $white);
+
+      svg {
+        margin-right: 10px;
+        font-size: 25px;
+      }
+
+      @include hover() {
+        text-decoration: none;
+        background-color: $blue-gray-5;
+        transition: all .1s ease;
+
+        svg {
+          fill: theme-color("primary");
+        }
+      }
+
+      &.active {
+        background-color: rgba($blue-gray-5, 0.5);
+  
+        svg {
+          fill: theme-color("primary");
+        }
+  
+        &:after {
+          content: '';
+          right: -1px;
+          top: 0px;
+          height: 100%;
+          width: 5px;
+          background-color: theme-color("primary");
+          position: absolute;
+          z-index: 9;
+        }
+      }
+    }
+  }
+}

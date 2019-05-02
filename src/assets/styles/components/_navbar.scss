@@ -1,0 +1,21 @@
+.navbar {
+  ul {
+    margin-bottom: 0 !important;
+
+    &.desktop {
+      li {
+        padding: 0 15px;
+
+        &.system-options {
+          @include create-font($size: 14px);
+          padding-right: 0;
+
+          .system-perfil {
+            color: $gray-2;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

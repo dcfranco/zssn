@@ -1,0 +1,83 @@
+.table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+
+  &.min-width-md {
+    min-width: 1250px;
+  }
+
+  &.min-width-lg {
+    min-width: 1800px;
+  }
+
+  thead {
+    @include create-font($size: 14px, $weight: bold, $color: $blue-gray-5);
+    tr {
+      th {
+        padding: 15px 5px 15px 25px;
+        background-color: transparent;
+        border: none !important;
+      }
+    }
+  }
+
+  tbody {
+    @include create-font($size: 16px, $weight: normal, $color: $blue-gray-5);
+    tr {
+      background-color: $white;
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
+      td {
+        padding: 15px 5px 15px 25px;
+        border: none;
+        vertical-align: middle;
+
+        &:last-child {
+          padding-right: 15px;
+        }
+
+        svg{
+          fill: $gray-10
+        }
+      }
+    }
+  }
+}
+
+.table-toast{
+  width: 280px;
+  height: 76px;
+  border-radius: 70px;
+  background-color: #2196F3;
+  @include flexbox($align: center, $justify:center);
+  box-shadow: 0px 2px 7px -3px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  visibility: visible;
+  opacity: 1;
+
+  &.disabled{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s cubic-bezier(.4,.27,.21,.94);
+  }
+
+  span {
+    text-align: center;
+    max-width: 180px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  svg {
+    width: 75px;
+    height: 75px;
+  }
+}

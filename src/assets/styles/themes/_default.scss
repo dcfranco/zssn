@@ -1,0 +1,14 @@
+$theme-colors: (
+  "primary": $green,
+  "secondary": $blue-gray-4,
+  "light": $white-1,
+  "container-light": $gray-0,
+  "gray": $gray-5,
+  "blue-light": $blue-gray-1,
+  "input-border": $blue-gray-1,
+);
+
+@import "~bootstrap/scss/bootstrap";
+@import "components/components";
+@import "pages/pages";
+@import "responsive/responsive";

@@ -1,0 +1,37 @@
+@media screen and (max-width: 991px) {
+  .navbar {
+    background-color: theme-color("secondary") !important;
+
+    .navbar-toggler {
+      display: block;
+      border: unset;
+      padding: 0px;
+      
+      &:focus() {
+        border: unset;
+      }
+    }
+
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: flex;
+
+      li {
+        border-color: $blue-gray-5 !important;
+        color: $white;
+
+        &:first-child {
+          padding: 0px 0px 0px 15px;
+        }
+
+        &:last-child {
+          padding: 0px 15px;
+          border-color: $blue-gray-5;
+          color: $white;
+        }
+      }
+    }
+  }
+}
